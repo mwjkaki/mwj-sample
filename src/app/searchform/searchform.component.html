@@ -6,20 +6,19 @@
 <p>
   <mat-form-field>
     <mat-label>日付(単一/下限)</mat-label>
-    <input ngModel #mindate="ngModel" name="mindate" type="text" matInput [matDatepicker]="minDatePicker" [disabled]="inputDisabled" required>
+    <input ngModel #mindate="ngModel" name="mindate" type="text" matInput [matDatepicker]="minDatePicker" required>
     <mat-error *ngIf="mindate.invalid && mindate.errors.required">
       日付入力が必要！
     </mat-error>
     <mat-datepicker-toggle matSuffix [for]="minDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #minDatePicker [touchUi]="touch" [disabled]="datepickerDisabled"></mat-datepicker>
+    <mat-datepicker #minDatePicker></mat-datepicker>
   </mat-form-field>
   ～
   <mat-form-field>
     <mat-label>日付(上限)</mat-label>
-    <input matInput [matDatepicker]="maxDatePicker"  [(ngModel)]="maxDate"
-    [disabled]="inputDisabled">
+    <input matInput [matDatepicker]="maxDatePicker">
     <mat-datepicker-toggle matSuffix [for]="maxDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #maxDatePicker [touchUi]="touch" [disabled]="datepickerDisabled"></mat-datepicker>
+    <mat-datepicker #maxDatePicker></mat-datepicker>
   </mat-form-field>
 </p>
 <p>
@@ -37,7 +36,7 @@
   ～
   <mat-form-field>
     <mat-label>商品コード(上限)</mat-label>
-    <input matInput [(ngModel)]="maxGoods" [disabled]="inputDisabled">
+    <input matInput>
   </mat-form-field>
 </p>
 <p>
