@@ -4,8 +4,14 @@ import 'hammerjs';
 import {
   MatButtonModule,
   MatMenuModule,
+  MatCheckboxModule,
+  MatOptionModule,
+  MatSelectModule,
   MatToolbarModule,
   MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
   MatCardModule
 } from '@angular/material';
 
@@ -13,15 +19,27 @@ import {
   imports: [
     MatButtonModule,
     MatMenuModule,
+    MatCheckboxModule,
+    MatOptionModule,
+    MatSelectModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatCardModule
   ],
   exports: [
     MatButtonModule,
     MatMenuModule,
+    MatCheckboxModule,
+    MatOptionModule,
+    MatSelectModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     MatCardModule
   ]
 })
