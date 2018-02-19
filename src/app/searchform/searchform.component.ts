@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DateAdapter, NativeDateAdapter } from '@angular/material';
 import { FormControl, Validators } from '@angular/forms';
 
-class MyDateAdapter extends NativeDateAdapter {
+export class MyDateAdapter extends NativeDateAdapter {
   getDateNames(): string[] {
     const dateNames: string[] = [];
     for (let i = 0; i < 31; i++) {
