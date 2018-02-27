@@ -15,11 +15,12 @@ export class MyDateAdapter extends NativeDateAdapter {
 @Component({
   selector: 'app-searchform',
   templateUrl: './searchform.component.html',
+　styleUrls: [ './searchform.component.css' ],
   providers: [
     {provide: DateAdapter, useClass: MyDateAdapter}
   ]
-
 })
+
 export class SearchformComponent implements OnInit {
   soukoCtrl = new FormControl('', [Validators.required]);
   souko = [

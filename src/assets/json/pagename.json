@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/search",
+    "name": "在庫検索"
+  },
+  {
+    "path": "/result",
+    "name": "在庫情報"
+  },
+  {
+    "path": "/jyuden",
+    "name": "受注伝票"
+  }
+]

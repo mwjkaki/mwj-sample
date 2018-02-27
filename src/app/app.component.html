@@ -1,3 +1,59 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-headermenu></app-headermenu>
-<app-searchform></app-searchform>
+<mat-sidenav-container>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon class="icon">menu</mat-icon>
+      </button>
+      {{name}}
+      <span class="toolbar-spacer"></span>
+      <img src="./assets/img/logo.png" />
+      <button mat-icon-button>
+        <mat-icon class="icon">more_vert</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <mat-sidenav #sidenav mode="side" class="app-sidenav" opened="true">
+
+    <mat-list><a mat-list-item href="#">伝票入力</a></mat-list>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          マスタ
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <a mat-list-item href="#">商品マスタ</a>
+        <a mat-list-item href="#">顧客マスタ</a>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-list><a mat-list-item href="#">受注履歴</a></mat-list>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          売上出荷
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <a mat-list-item href="#">通販入金伝票</a>
+        <a mat-list-item href="#">一括入金処理</a>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              掛売関連
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list>
+            <a mat-list-item href="#">掛売返品</a>
+            <a mat-list-item href="#">掛売請求伝票</a>
+
+          </mat-list>
+        </mat-expansion-panel>
+      </mat-list>
+    </mat-expansion-panel>
+
+  </mat-sidenav>
+
+</mat-sidenav-container>

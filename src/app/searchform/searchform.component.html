@@ -1,54 +1,50 @@
-<style>
-  div { background-color: lightgrey; }
-</style>
-<h2>在庫・商品台帳</h2>
-<div>
-<p>
-  <mat-form-field>
-    <mat-label>日付(単一/下限)</mat-label>
-    <input ngModel #mindate="ngModel" name="mindate" type="text" matInput [matDatepicker]="minDatePicker" required>
-    <mat-error *ngIf="mindate.invalid && mindate.errors.required">
-      日付入力が必要！
-    </mat-error>
-    <mat-datepicker-toggle matSuffix [for]="minDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #minDatePicker></mat-datepicker>
-  </mat-form-field>
-  ～
-  <mat-form-field>
-    <mat-label>日付(上限)</mat-label>
-    <input matInput [matDatepicker]="maxDatePicker">
-    <mat-datepicker-toggle matSuffix [for]="maxDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #maxDatePicker></mat-datepicker>
-  </mat-form-field>
-</p>
-<p>
-  <mat-input-container>
-    <input
-    ngModel
-    #username="ngModel"
-    name="username"
-    type="text" matInput placeholder="商品コード(単一/下限)" required>
-    <mat-hint>商品名を表示</mat-hint>
-    <mat-error *ngIf="username.invalid && username.errors.required">
-      商品コード入力が必要！
-    </mat-error>
-  </mat-input-container>
-  ～
-  <mat-form-field>
-    <mat-label>商品コード(上限)</mat-label>
-    <input matInput>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field>
-    <mat-select placeholder="倉庫" [formControl]="soukoCtrl" required>
-      <mat-option *ngFor="let soko of souko" [value]="soko.value">
-        {{ soko.viewValue }}
-      </mat-option>
-    </mat-select>
-    <mat-error *ngIf="soukoCtrl.hasError('required')">倉庫を選択！</mat-error>
-  </mat-form-field>
-</p>
-</div>
-<button color="primary" mat-raised-button>表示</button>
-<button mat-button>キャンセル</button>
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-select placeholder="倉庫" [formControl]="soukoCtrl" required>
+        <mat-option *ngFor="let soko of souko" [value]="soko.value">
+          {{ soko.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="soukoCtrl.hasError('required')">倉庫選択必須！</mat-error>
+    </mat-form-field>
+    <a mat-raised-button href="result" color="primary">表示</a>
+  </mat-card-content>
+  <p>
+    <mat-form-field>
+      <mat-label>日付(単一/下限)</mat-label>
+      <input ngModel #mindate="ngModel" name="mindate" type="text" matInput [matDatepicker]="minDatePicker" required>
+      <mat-error *ngIf="mindate.invalid && mindate.errors.required">
+        日付入力必須！
+      </mat-error>
+      <mat-datepicker-toggle matSuffix [for]="minDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #minDatePicker></mat-datepicker>
+    </mat-form-field>
+    ～
+    <mat-form-field>
+      <mat-label>日付(上限)</mat-label>
+      <input matInput [matDatepicker]="maxDatePicker">
+      <mat-datepicker-toggle matSuffix [for]="maxDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #maxDatePicker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-input-container>
+      <input
+      ngModel
+      #username="ngModel"
+      name="username"
+      type="text" matInput placeholder="商品コード(単一/下限)" required>
+      <mat-hint>商品名を表示</mat-hint>
+      <mat-error *ngIf="username.invalid && username.errors.required">
+        商品コード入力必須！
+      </mat-error>
+    </mat-input-container>
+    ～
+    <mat-form-field>
+      <mat-label>商品コード(上限)</mat-label>
+      <input matInput>
+      <mat-hint>商品名を表示</mat-hint>
+    </mat-form-field>
+  </p>
+</mat-card>

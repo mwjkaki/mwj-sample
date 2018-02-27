@@ -3,44 +3,59 @@ import 'hammerjs';
 
 import {
   MatButtonModule,
-  MatMenuModule,
+  MatCardModule,
   MatCheckboxModule,
-  MatOptionModule,
-  MatSelectModule,
-  MatToolbarModule,
+  MatDatepickerModule,
+  MatExpansionModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
+  MatMenuModule,
   MatNativeDateModule,
-  MatDatepickerModule,
-  MatCardModule
+  MatOptionModule,
+  MatPaginatorModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatToolbarModule
 } from '@angular/material';
 
 @NgModule({
   imports: [
     MatButtonModule,
-    MatMenuModule,
+    MatCardModule,
     MatCheckboxModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatToolbarModule,
+    MatDatepickerModule,
+    MatExpansionModule,
     MatIconModule,
     MatInputModule,
-    MatDatepickerModule,
+    MatListModule,
+    MatMenuModule,
     MatNativeDateModule,
-    MatCardModule
+    MatOptionModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
-    MatMenuModule,
+    MatCardModule,
     MatCheckboxModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatToolbarModule,
+    MatDatepickerModule,
+    MatExpansionModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
+    MatMenuModule,
     MatNativeDateModule,
-    MatDatepickerModule,
-    MatCardModule
+    MatOptionModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule {}
