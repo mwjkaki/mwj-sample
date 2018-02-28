@@ -8,7 +8,7 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
-import { HeadermenuComponent } from './headermenu/headermenu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchformComponent } from './searchform/searchform.component';
 import { ResultlistComponent } from './resultlist/resultlist.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HeadermenuComponent,
+    DashboardComponent,
     SearchformComponent,
     ResultlistComponent,
     PageNotFoundComponent

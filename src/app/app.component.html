@@ -1,6 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-sidenav-container>
-
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <button mat-icon-button (click)="sidenav.toggle()">
@@ -14,46 +13,132 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
+  <mat-card><mat-card-content>
   <router-outlet></router-outlet>
-  <mat-sidenav #sidenav mode="side" class="app-sidenav" opened="true">
-
-    <mat-list><a mat-list-item href="#">伝票入力</a></mat-list>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          マスタ
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-list>
-        <a mat-list-item href="#">商品マスタ</a>
-        <a mat-list-item href="#">顧客マスタ</a>
-      </mat-list>
-    </mat-expansion-panel>
-    <mat-list><a mat-list-item href="#">受注履歴</a></mat-list>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          売上出荷
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-list>
-        <a mat-list-item href="#">通販入金伝票</a>
-        <a mat-list-item href="#">一括入金処理</a>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              掛売関連
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-list>
-            <a mat-list-item href="#">掛売返品</a>
-            <a mat-list-item href="#">掛売請求伝票</a>
-
-          </mat-list>
-        </mat-expansion-panel>
-      </mat-list>
-    </mat-expansion-panel>
-
+　</mat-card-content></mat-card>
+  <mat-sidenav #sidenav mode="side" class="app-sidenav" opened="false">
+    <mat-accordion multi="false">
+      <mat-list><a mat-list-item href="#">伝票入力</a></mat-list>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            マスタ
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">商品マスタ</a>
+          <a mat-list-item href="#">顧客マスタ</a>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            顧客関連
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">DM抽出</a>
+          <a mat-list-item href="#">DMリスト</a>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-list><a mat-list-item href="#">受注履歴</a></mat-list>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            入金
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">通販入金伝票</a>
+          <a mat-list-item href="#">一括入金処理</a>
+          <a mat-list-item href="#">NP状況確認</a>
+          <a mat-list-item href="#">NPﾃﾞｰﾀ編集</a>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            掛売関連
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">掛売返品</a>
+          <a mat-list-item href="#">掛売請求伝票</a>
+          <a mat-list-item href="#">掛売入金</a>
+          <a mat-list-item href="#">顧客台帳照会</a>
+          <h2 mat-subheader>掛売印刷</h2>
+          <a mat-list-item href="#">請求予定一覧表</a>
+          <a mat-list-item href="#">請求書</a>
+          <a mat-list-item href="#">顧客台帳</a>
+          <a mat-list-item href="#">売掛残高一覧表</a>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            出荷
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">出荷更新処理</a>
+          <a mat-list-item href="#">出荷確認処理</a>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            印刷関連
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <h2 mat-subheader>日次印刷</h2>
+          <a mat-list-item href="#">納品書</a>
+          <a mat-list-item href="#">送り状</a>
+          <a mat-list-item href="#">出荷指示書</a>
+          <a mat-list-item href="#">未出荷一覧表</a>
+          <a mat-list-item href="#">未入金一覧表</a>
+          <h2 mat-subheader>管理帳票</h2>
+          <a mat-list-item href="#">商品別集計表</a>
+          <a mat-list-item href="#">顧客別商品集計表</a>
+          <a mat-list-item href="#">顧客別売上一覧表</a>
+　　　　 </mat-list>
+      </mat-expansion-panel>
+      <mat-list><a mat-list-item href="#">ファイル出力</a></mat-list>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            在庫関連
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="search">在庫検索</a>
+          <h2 mat-subheader>在庫伝票処理</h2>
+          <a mat-list-item href="#">入荷伝票</a>
+          <a mat-list-item href="#">移動伝票</a>
+          <a mat-list-item href="#">展開伝票</a>
+          <a mat-list-item href="#">破棄伝票</a>
+          <a mat-list-item href="#">棚卸処理</a>
+          <h2 mat-subheader>帳票</h2>
+          <a mat-list-item href="#">移動伝票納品書</a>
+          <a mat-list-item href="#">受注残確認表</a>
+　　　　 </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            仕入関連
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="">発注伝票</a>
+          <a mat-list-item href="">仕入伝票</a>
+          <a mat-list-item href="">発注履歴</a>
+          <h2 mat-subheader>発注印刷</h2>
+          <a mat-list-item href="#">発注書</a>
+          <a mat-list-item href="#">発注一覧表</a>
+          <a mat-list-item href="#">ﾕｰｻﾞｰ指定発注書</a>
+　　　　 </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-sidenav>
-
 </mat-sidenav-container>
